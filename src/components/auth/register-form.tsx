@@ -34,7 +34,7 @@ export function RegisterForm() {
             setMessage(response?.message);
         }
         setIsLoading(false);
-        router.push("/login")
+        router.push("/")
     };
 
     return (
