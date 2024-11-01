@@ -25,6 +25,7 @@ export interface User{
     image?:string
     createdAt:Date
     updatedAt:Date
+    onlineStatus:boolean
     conversations:Conversation[]
 }
 
@@ -34,7 +35,8 @@ export interface Conversation{
     recipientId:number
     createdAt:string
     updatedAt:string
-    users:User[]
+    creator:User
+    recipient:User
     messages:Message[]
 }
 
@@ -48,5 +50,5 @@ export interface Message{
     conversationId:number
     sender:User
     reciever:User
-    conversation:Conversation
+    Conversation:Conversation
 }

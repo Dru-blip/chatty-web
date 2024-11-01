@@ -30,14 +30,14 @@ export default function LoginCodeForm({ email }: Props) {
                 <CardDescription>code wast sent to {email} The code will expire in 10 minutes.</CardDescription>
             </CardHeader>
             <CardContent className="grid grid-cols-1 gap-4">
-                <InputOTP maxLength={6} value={code} onChange={(value) => setCode(value)}>
-                    <InputOTPGroup>
-                        <InputOTPSlot index={0} />
-                        <InputOTPSlot index={1} />
-                        <InputOTPSlot index={2} />
-                        <InputOTPSlot index={3} />
-                        <InputOTPSlot index={4} />
-                        <InputOTPSlot index={5} />
+                <InputOTP maxLength={6} value={code} onChange={(value) => setCode(value)} className="w-full">
+                    <InputOTPGroup className="w-full">
+                        <InputOTPSlot index={0} className="w-full" />
+                        <InputOTPSlot index={1} className="w-full"/>
+                        <InputOTPSlot index={2} className="w-full"/>
+                        <InputOTPSlot index={3} className="w-full"/>
+                        <InputOTPSlot index={4} className="w-full"/>
+                        <InputOTPSlot index={5} className="w-full"/>
                     </InputOTPGroup>
                 </InputOTP>
                 <Button

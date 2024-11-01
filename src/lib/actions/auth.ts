@@ -3,6 +3,11 @@
 import { APIResponse, AuthResponse } from "@/types";
 import { cookies } from "next/headers";
 
+
+export const logout=()=>{
+    cookies().delete("token")
+}
+
 export const register = async (data: Record<string, string>): Promise<APIResponse<AuthResponse> | null> => {
     try {
         const response = await fetch(process.env.BASE_API + "auth/register", {
@@ -54,7 +59,6 @@ export const loginWithPassword = async (data: Record<string, string>): Promise<A
 };
 
 export const loginWithCode = async (data: Record<string, string>) => {
-    console.log(data);
     try {
         const response = await fetch(process.env.BASE_API + "auth/code", {
             method: "POST",

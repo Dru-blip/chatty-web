@@ -18,8 +18,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${poppins.className} antialiased`}>
-                <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+            <body className={`${poppins.className} antialiased min-h-screen overflow-hidden`}>
+                <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
                     {children}
                 </ThemeProvider>
             </body>
